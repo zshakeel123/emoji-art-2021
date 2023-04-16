@@ -32,6 +32,7 @@ struct PaletteChooserView: View {
             Image(systemName: "paintpalette")
         }
         .font(emojiFont)
+        .contextMenu { contextMenu }
     }
     
     func body(for palette: Palette) -> some View {
@@ -44,11 +45,45 @@ struct PaletteChooserView: View {
         .transition(rollTransition)
     }
     
+    var gotoMenu: some View {
+        Menu {
+            ForEach (store.palettes) { palette in
+                AnimatedActionButton(title: palette.name) {
+                    if let index = store.palettes.index(matching: palette) {
+                        chosenPaletteIndex = index
+                    }
+                }
+            }
+        } label: {
+            Label("Go To", systemImage: "text.insert")
+        }
+    }
+    
     var rollTransition: AnyTransition {
         AnyTransition.asymmetric(
             insertion: .offset(x: 0, y: emojiFontSize),
             removal: .offset(x: 0, y: -emojiFontSize)
         )
+    }
+    
+    @ViewBuilder
+    var contextMenu: some View {
+        AnimatedActionButton(title: "Edit", systemImage: "pencil") {
+//            editing = true
+            //paletteToEdit = store.palette(at: chosenPaletteIndex)
+        }
+        AnimatedActionButton(title: "New", systemImage: "plus") {
+            store.insertPalette(named: "New", emojis: "", at: chosenPaletteIndex)
+//            editing = true
+            //paletteToEdit = store.palette(at: chosenPaletteIndex)
+        }
+        AnimatedActionButton(title: "Delete", systemImage: "minus.circle") {
+            chosenPaletteIndex = store.removePalette(at: chosenPaletteIndex)
+        }
+        AnimatedActionButton(title: "Manager", systemImage: "slider.vertical.3") {
+            //managing = true
+        }
+        gotoMenu
     }
 }
 
