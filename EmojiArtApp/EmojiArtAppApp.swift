@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct EmojiArtAppApp: App {
-    let document = EmojiArtDocumentVM()
+    @StateObject var document = EmojiArtDocumentVM()
+    @StateObject var paletteStore = PaletteStore(named: "Default")
+    
     var body: some Scene {
         WindowGroup {
             EmojiArtDocumentView(document: document)
+                .environmentObject(paletteStore)
         }
     }
 }
