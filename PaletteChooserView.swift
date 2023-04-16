@@ -40,6 +40,15 @@ struct PaletteChooserView: View {
             ScrollingEmojisView(emojis: palette.emojis)
                 .font(emojiFont)
         }
+        .id(palette.id)
+        .transition(rollTransition)
+    }
+    
+    var rollTransition: AnyTransition {
+        AnyTransition.asymmetric(
+            insertion: .offset(x: 0, y: emojiFontSize),
+            removal: .offset(x: 0, y: -emojiFontSize)
+        )
     }
 }
 
