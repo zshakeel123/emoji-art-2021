@@ -49,6 +49,12 @@ struct PaletteChooserView: View {
         .popover(item: $paletteToEdit) { palette in
             PaletteEditorView(palette: $store.palettes[palette])
         }
+        .popover(isPresented: $managing, content: {
+            PaletteManagerView().frame(minWidth: 400, minHeight: 600)
+        })
+//        .sheet(isPresented: $managing) {
+//            PaletteManagerView()
+//        }
     }
     
     //@State private var editing = false

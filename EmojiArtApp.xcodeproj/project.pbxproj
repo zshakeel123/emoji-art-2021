@@ -19,6 +19,7 @@
 		B6EEFF7B29EBF5D400C37AF0 /* PaletteStoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EEFF7A29EBF5D400C37AF0 /* PaletteStoreVM.swift */; };
 		B6EEFF7E29EC0BFA00C37AF0 /* PaletteChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EEFF7D29EC0BFA00C37AF0 /* PaletteChooserView.swift */; };
 		B6EEFF8129EC178000C37AF0 /* PaletteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EEFF8029EC178000C37AF0 /* PaletteEditorView.swift */; };
+		B6EEFF8429EC604D00C37AF0 /* PaletteManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EEFF8329EC604D00C37AF0 /* PaletteManagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B6EEFF7A29EBF5D400C37AF0 /* PaletteStoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteStoreVM.swift; sourceTree = SOURCE_ROOT; };
 		B6EEFF7D29EC0BFA00C37AF0 /* PaletteChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteChooserView.swift; sourceTree = SOURCE_ROOT; };
 		B6EEFF8029EC178000C37AF0 /* PaletteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditorView.swift; sourceTree = "<group>"; };
+		B6EEFF8329EC604D00C37AF0 /* PaletteManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteManagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				B6EEFF7D29EC0BFA00C37AF0 /* PaletteChooserView.swift */,
 				B6EEFF8029EC178000C37AF0 /* PaletteEditorView.swift */,
+				B6EEFF8329EC604D00C37AF0 /* PaletteManagerView.swift */,
 				B6EEFF7A29EBF5D400C37AF0 /* PaletteStoreVM.swift */,
 				B65B218829EA2938003837C5 /* EmojiArtAppApp.swift */,
 				B65B218A29EA2938003837C5 /* EmojiArtDocumentView.swift */,
@@ -171,6 +174,7 @@
 				B65B218929EA2938003837C5 /* EmojiArtAppApp.swift in Sources */,
 				B65B219929EA297B003837C5 /* EmojiArtModel.swift in Sources */,
 				B6EEFF7B29EBF5D400C37AF0 /* PaletteStoreVM.swift in Sources */,
+				B6EEFF8429EC604D00C37AF0 /* PaletteManagerView.swift in Sources */,
 				B65B219C29EA2D13003837C5 /* EmojiArtModel.Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
